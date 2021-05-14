@@ -124,5 +124,10 @@ public class VRCamera : NetworkBehaviour
     base.OnLostOwnership();
   }
 
+  void OnCollisionEnter(Collision other)
+  {
+      Debug.Log("Colision");
+  }
+
   Vector2 AxisDirection => vrcontrols.Gameplay.Movement.ReadValue<Vector2>();
 }
